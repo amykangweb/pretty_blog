@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/amykangweb/pretty_blog.png?label=ready&title=Ready)](https://waffle.io/amykangweb/pretty_blog)
 <h1>Pretty Blog</h1>
 
 <h2>Information</h2>
