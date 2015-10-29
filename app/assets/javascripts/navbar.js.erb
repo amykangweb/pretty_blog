@@ -1,0 +1,30 @@
+$(document).ready(function(){
+
+  var $dropdown = $("<div class='overlay-dropdown'></div>");
+  var $login = $("<h1>Log In</h1>");
+  var $form = $("<h1>New Post</h1>");
+
+  $("body").append($dropdown);
+
+  $(".navbar-right li a").click(function(event){
+    console.log("overlay");
+    event.preventDefault();
+    var menu = $(this).text();
+    $dropdown.show();
+    console.log(menu);
+    chooseMenu(menu);
+  });
+
+  $dropdown.click(function(){
+    $dropdown.hide();
+  });
+
+  function chooseMenu(menu) {
+    if(menu === "Menu") {
+      $dropdown.empty().append($login);
+    }else{
+      $dropdown.empty().append($form);
+    }
+  }
+
+});
