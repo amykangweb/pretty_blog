@@ -1,0 +1,11 @@
+<div class="form-container-menu container" ng-show="post.showForm">
+  <h3>Edit Post</h3>
+  <form ng-submit="update(post)" name="post_form">
+    <label for="title">Title</label>
+    <input type="text" name="title" ng-model="post.title" class="form-control" />
+    <label for="content">Content</label>
+    <textarea name="content" ng-model="post.content" class="form-control" rows="8"></textarea>
+    <p></p>
+    <input type="submit" value="Update Post" class="btn btn-medium" />
+  </form>
+</div>

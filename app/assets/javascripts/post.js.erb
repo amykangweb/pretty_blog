@@ -1,0 +1,33 @@
+(function() {
+
+  var app = angular.module('blog-partials', []);
+
+  app.directive('loginForm', function(){
+    return {
+      restrict: 'E',
+      templateUrl: '<%= asset_path("login-form.html.erb") %>'
+    };
+  });
+
+  app.directive('editAccount', function(){
+    return {
+      restrict: 'E',
+      templateUrl: '<%= asset_path("edit-account.html.erb") %>'
+    };
+  });
+
+  app.directive('postForm', function(){
+    return {
+      restrict: 'E',
+      templateUrl: '<%= asset_path("post-form.html.erb") %>'
+    };
+  });
+
+  app.directive('editForm', function(){
+    return {
+      restrict: 'E',
+      templateUrl: '<%= asset_path("edit-form.html.erb") %>'
+    };
+  });
+
+})();
