@@ -1,0 +1,16 @@
+<div class="form-container-menu container" ng-show="$root.account">
+  <h3>Edit Account</h3>
+  <form name="account_form">
+    <label for="name">Name</label>
+    <input type="text" name="name" ng-model="user.name" class="form-control" />
+    <label for="email">Email</label>
+    <input type="text" name="email" ng-model="user.email" class="form-control" />
+    <label for="password">Password</label>
+    <input type="password" name="password" ng-model="user.password" class="form-control" />
+    <p></p>
+    <input type="submit" value="Update Account" class="btn btn-medium" />
+  </form>
+</div>
+<p class="text-center cancel">
+  <a href ng-click="editAccount()" ng-show="$root.account">cancel</a>
+</p>
