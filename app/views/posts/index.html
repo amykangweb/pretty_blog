@@ -1,0 +1,40 @@
+<div ng-controller="blogController as blog" class="container">
+<!-- Log In or Sign Up -->
+  <div class="form-container container" ng-hide="$root.loggedIn">
+    <h3>Log In</h3>
+    <form ng-submit="$root.session(user)" name="login_form">
+      <label for="email">Email</label>
+      <input type="text" name="email" ng-model="user.email" class="form-control" />
+      <label for="password">Password</label>
+      <input type="password" name="password" ng-model="user.password" class="form-control" />
+      <p></p>
+      <input type="submit" value="Log In" class="btn btn-medium" />
+    </form>
+  </div>
+
+  <!-- Blog Posts -->
+  <ul class="blog-posts-container container" ng-show="$root.loggedIn">
+    <li ng-repeat="post in $root.posts" class="post-panel panel">
+      <span class="glyphicon glyphicon-pencil" ng-click="editForm(post)"></span>
+
+      <div ng-hide="post.showForm">
+        <h3>{{post.title}}</h3>
+        <p class="post-info">{{post.name}} / {{post.created_at}}</p>
+        <p>{{post.content}}</p>
+        <div class="btn btn-default">Comments</div>
+      </div>
+
+      <div class="form-container-menu container" ng-show="post.showForm">
+        <h3>Edit Post</h3>
+        <form ng-submit="update(post)" name="post_form">
+          <label for="title">Title</label>
+          <input type="text" name="title" ng-model="post.title" class="form-control" />
+          <label for="content">Content</label>
+          <textarea name="content" ng-model="post.content" class="form-control" rows="8"></textarea>
+          <p></p>
+          <input type="submit" value="Update Post" class="btn btn-medium" />
+        </form>
+      </div>
+    </li>
+  </ul>
+</div>

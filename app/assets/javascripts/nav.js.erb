@@ -1,0 +1,35 @@
+(function(){
+
+  var app = angular.module('blog-menu', []);
+
+  app.controller("menuController", function($scope, $rootScope) {
+    $rootScope.menuOpen = false;
+    $rootScope.newPost = false;
+
+    $scope.menu = function() {
+      console.log("open menu");
+      $rootScope.menuOpen = true;
+    };
+
+    $scope.close = function() {
+      console.log("close menu");
+      $rootScope.account = false;
+      $rootScope.menuOpen = false;
+      $rootScope.newPost = false;
+    };
+
+    $scope.post = function() {
+      console.log("New Post");
+      $rootScope.newPost = true;
+    };
+
+    $scope.logOut = function() {
+      console.log("log out");
+      $rootScope.menuOpen = false;
+      $rootScope.account = false;
+      $rootScope.loggedIn = false;
+    };
+
+});
+
+})();
