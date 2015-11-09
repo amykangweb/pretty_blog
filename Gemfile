@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'angularjs-rails', '~> 1.4.7'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jbuilder', '~> 2.0'
@@ -18,7 +19,6 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'pundit'
 gem 'figaro'
 gem 'gravtastic'
-gem 'bootstrap-sass', '~> 3.3.5'
 gem 'will_paginate-bootstrap'
 
 group :production do
