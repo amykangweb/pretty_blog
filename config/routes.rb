@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :posts
+  namespace :api do
+    resources :posts, only: [:create, :update, :index, :destroy]
+  end
   root 'posts#index'
 end

@@ -1,4 +1,4 @@
-<div ng-controller="blogController as blog" class="container">
+<div ng-controller="blogController as blog" ng-init="index()" class="container">
 
 <!-- Log In Form -->
 <login-form></login-form>
@@ -11,7 +11,7 @@
       <div ng-hide="post.showForm">
         <h3>{{post.title}}</h3>
         <p class="post-info">{{post.name}} / {{post.created_at}}</p>
-        <p>{{post.content}}</p>
+        <p>{{post.body}}</p>
         <div class="btn btn-default">Comments</div>
       </div>
 
